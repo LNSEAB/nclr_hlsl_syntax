@@ -100,8 +100,8 @@ syn region	hlslCurly			transparent start="{" end="}" contains=TOP,hlslCurlyError
 syn match	hlslCurlyError		display "}"
 
 " Semantics
-syn region	hlslConditionalOperator		start="[a-zA-Z0-9_().]\+\s*?" end=":\s*[a-zA-Z0-9_().]\+"
-syn match	hlslSemantics				":\s*\w\+" contains=ALLBUT,hlslConditionalOperator
+syn region	hlslConditionalOperator		start="?" end=":"
+syn match	hlslSemantics				":\s*\w\+" contains=TOP,hlslConditionalOperator
 
 syntax case match
 
