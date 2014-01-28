@@ -85,7 +85,7 @@ syn	region	hlslCommentLine		start="//" end="$" keepend
 " Preprocessor
 syn region	hlslPPConditional	start="#\s*\%(if\|ifdef\|ifndef\|elif\|else\)" end="$"
 syn match	hlslPPEndIf			"#\s*endif"
-syn	match	hlslPPInclude		"#\s*include\s*[<\"][^>\"]\+[>\"]"
+syn	region hlslPPInclude		start="#\s*include\s*[<\"][^>\"]\+[>\"]" end="$" keepend
 syn match	hlslPPLine			"#\s*line\s\+[0-9]\+\s\+\%(\"[^\"]\+\"\)\?"
 syn region	hlslPPDefine		start="#\s*define" skip="\\\s*$" end="$" keepend
 syn match	hlslPPUndef			"#\s*undef"
